@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-1<html lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -75,7 +75,8 @@
 
         }
         .span-section{
-            @apply font-fraunces font-black text-7xl
+            @apply font-fraunces font-black text-7xl font-fraunces font-black text-center
+  bg-gradient-to-b from-black/25 to-black/0
         }
         .div-section-2{
             @apply text-start 
@@ -109,9 +110,6 @@
         .paragraphe-card{
             @apply max-w-[320px] mt-[42px]
         }
-
-
-
         .footer{ @apply mt-[319px] mb-[88px] bg-dark-blue py-[40px] px-[81px] flex justify-between items-center container max-w-[1280px] mx-auto px-[81px]
 
         }
@@ -127,9 +125,7 @@
 
            </style>
 </head>
-
 <body>
-
     <header class="flex-between py-[44px] px-[81px]">
         <img src="./images/Group 5.svg" alt="logo" class="w-[235px] h-[26px]">
         <nav class="nav tracking-[0.92px]">
@@ -157,7 +153,8 @@
         <!-- SECTION 2 -->
         <section class="section-2 page-container">
             <div>
-                <span class="span-section">
+                <span class="span-section 
+  bg-clip-text text-transparent">
                     our collection
                 </span>
             </div>
@@ -210,32 +207,32 @@
             <div class="div-section-3">
                 <!-- card 1 -->
                 <div class="card">
-                    <img src="./images/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
+                    <img src="./images/coffee-bean.svg" alt="Best quality" class="w-[72px] h-[72px]">
                     <div class="text-center ">
                         <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
                         <p class="p">
-                            Discover an endless variety of the world’s
-                            best artisan coffee from each of our roasters.
+                            Special offers and swag when you subscribe, including 30% off your first shipment.
                         </p>
                     </div>
                 </div>
+                <!-- card 2 -->
                 <div class="card">
-                    <img src="./images/Combined Shape.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
+                    <img src="./images/Combined Shape.svg" alt="Free shipping" class="w-[72px] h-[72px]">
                     <div class="text-center ">
-                        <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
+                        <h3 class="text-[24px] font-black mb-[24px]">Free shipping</h3>
                         <p class="p">
-                            Discover an endless variety of the world’s
+                           Discover an endless variety of the world’s
                             best artisan coffee from each of our roasters.
                         </p>
                     </div>
                 </div>
+                <!-- card 4 -->
                 <div class="card">
                     <img src="./images/Combined Shape(1).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
                     <div class="text-center ">
                         <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
-                        <p class="">
-                            Discover an endless variety of the world’s
-                            best artisan coffee from each of our roasters.
+                        <p class="p">
+                            We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
                         </p>
                     </div>
                 </div>
@@ -244,8 +241,11 @@
         <!-- SECTION 4 -->
         <section class="mt-[296px] page-container">
             <div>
+                <!-- heading of content -->
                 <h3 class="h3 text-grey">How it works</h3>
+                <!-- div content -->
                 <div class="flex-between mx-[8px]">
+                    <!-- content-1 -->
                     <div class="mt-[32px]">
                         <h3 class="h3 heading-3">01</h3>
                         <h3 class="heading-card">Pick your
@@ -255,6 +255,7 @@
                             ethically sourced and we pay fair
                             prices for them. There are new coffees in all profiles every month for you to try out.</p>
                     </div>
+                    <!-- content-2 -->
                     <div class="mt-[32px]">
                         <h3 class="h3 heading-3">02</h3>
                         <h3 class="heading-card">Choose the frequency</h3>
@@ -262,6 +263,7 @@
                             and grind type. Pause, skip or cancel your subscription with no commitment through our
                             online portal.</p>
                     </div>
+                    <!-- content-3 -->
                     <div class="mt-[32px]">
                         <h3 class="h3 heading-3">03</h3>
                         <h3 class="heading-card">Receive and enjoy!</h3>
@@ -271,15 +273,20 @@
                     </div>
                 </div>
             </div>
+             <button class="button mt-[90px]">Create your plan</button>
         </section>
     </main>
+    <!-- FOOTER -->
     <footer class="footer">
-        <img src="./images/Group 5.png" alt="Coffeeroasters" class="w-[235px] h-[25px]">
+        <!-- LOGO-FOOTER -->
+        <img src="./images/Group 5.png" alt="Logo-2" class="w-[235px] h-[25px]">
+        <!-- links -->
         <div class="div-footer">
             <a href="#" class="a">HOME</a>
             <a href="#" class="a">ABOUT US</a>
             <a href="#" class="a">CREATE YOUR PLAN</a>
         </div>
+        <!-- Social Media links -->
         <div class="div-footer">
             <a href="https://www.facebook.com/login" target="_blank">
                 <img src="./images/Path.svg" alt="Facebook" class="social-footer">
