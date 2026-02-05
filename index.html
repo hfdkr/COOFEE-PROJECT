@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of my page -->
     <title>Coffee</title>
+    <!-- links for tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- links for fints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
         rel="stylesheet">
-
+     <!-- style of my page -->
     <style type="text/tailwindcss">
         @theme{
             /* colors  */
@@ -41,16 +44,24 @@
             --text-xs: 12px;
             --text-xs-line-height: 15px;
         } 
-        .title { @apply text-10xl font-fraunces font-black }
-        h1 { @apply font-fraunces font-black text-7xl  }
-        h2 { @apply font-fraunces font-black text-4xl  }
-        h3 { @apply font-fraunces font-black text-3xl  }
-        h4 { @apply font-fraunces font-black text-2xl  }
-        .body { @apply font-barlow text-base text-dark-blue }
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px]
+        .title {
+             @apply text-10xl font-fraunces font-black }
+        h1 { 
+            @apply font-fraunces font-black text-7xl  }
+        h2 {
+             @apply font-fraunces font-black text-4xl  }
+        h3 {
+             @apply font-fraunces font-black text-3xl  }
+        h4 {
+             @apply font-fraunces font-black text-2xl  }
+        .body {
+             @apply font-barlow text-base text-dark-blue }
+        nav {
+             @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px]
             flex items-center gap-[32px]
         }
-        p{ @apply font-barlow text-base text-light-cream
+        p{ 
+            @apply font-barlow text-base text-light-cream
 
         }
         button {
@@ -121,7 +132,7 @@
 
            </style>
 </head>
-
+<!-- body -->
 <body>
 <!-- header -->
     <header class="flex-between py-[44px] px-[81px]">
@@ -131,12 +142,12 @@
             <a class="a" href="#">ABOUT US</a>
             <a class="a" href="#">Create your plan</a>
         </nav>
-
     </header>
     <!-- main -->
     <main class="main px-[79px] pt-[48px]">
         <!-- section-1 -->
         <section class="section container">
+            <!-- content -->
             <div class="max-w-[493px]">
                 <h1 class="h1 mb-[32px]">Great coffee made simple.</h1>
                 <p class="p mb-[56px]">
@@ -152,11 +163,13 @@
         <!-- section-2 -->
         <section class="section-2">
             <div>
+                <!-- title of my 4 content -->
                 <span class="span-section">
                     our collection
                 </span>
             </div>
             <div class="div-hero">
+                <!--Card-1 -->
                 <div class="div-2">
                     <img src="./images/kopi1 copy.png" alt="Gran Espresso" class="w-[200px] md:w-[255px]">
                     <div class="div-section-2">
@@ -165,6 +178,7 @@
                             intense experience</p>
                     </div>
                 </div>
+                <!-- Card-2 -->
                 <div class="div-2">
                     <img src="./images/kopi2.png" alt="Planalto" class="w-[200px] md:w-[255px]">
                     <div class="div-section-2">
@@ -173,6 +187,7 @@
                             fruits and nuts</p>
                     </div>
                 </div>
+                <!-- Card-3 -->
                 <div class="div-2">
                     <img src="./images/kopi3.png" alt="Piccollo" class="w-[200px] md:w-[255px]">
                     <div class="div-section-2">
@@ -181,8 +196,9 @@
                             cherry</p>
                     </div>
                 </div>
+                <!-- Card-4 -->
                 <div class="div-2">
-                    <img src="./images/kopi4.png" alt="Danche" class="w-[200px] md:w-[255px]">
+                    <img src="./images/kopi4.png" alt="Danche" class="w-[200px]">
                     <div class="div-section-2">
                         <h4 class="h4">Danche</h4>
                         <p class="body max-w-[255px]">Ethiopian hand-harvested blend densely packed with vibrant fruit
@@ -193,6 +209,7 @@
         </section>
         <!-- section-3 -->
         <section class="section-3">
+            <!-- Content section-3 -->
             <div class="hero">
                 <h2 class="h2">Why choose us?</h2>
                 <p class="p">
@@ -202,12 +219,13 @@
                     growers to give you a more impactful experience on every level.
                 </p>
             </div>
+            <!-- div-cards -->
             <div class="div-section-3">
                 <!-- card 1 -->
                 <div class="card">
                     <img src="./images/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
                     <div class="text-center ">
-                        <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
+                        <h3 class="h3 mb-[24px]">Best quality</h3>
                         <p class="p">
                             Discover an endless variety of the world’s
                             best artisan coffee from each of our roasters.
@@ -215,22 +233,22 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/Combined Shape.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
+                    <img src="./images/Combined Shape.svg" alt="Exclusive benefits" class="w-[72px] h-[72px]">
                     <div class="text-center ">
-                        <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
+                        <h3 class="h3 mb-[24px]">Exclusive&nbsp;benefits</h3>
                         <p class="p">
-                            Discover an endless variety of the world’s
-                            best artisan coffee from each of our roasters.
+                           Special offers and swag when you subscribe,
+                            including 30% off your first shipment.
                         </p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/Combined Shape(1).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
+                    <img src="./images/Combined Shape(1).svg" alt="Free shipping" class="w-[72px] h-[72px]">
                     <div class="text-center ">
-                        <h3 class="text-[24px] font-black mb-[24px]">Best quality</h3>
+                        <h3 class="h3 mb-[24px]">Free shipping</h3>
                         <p class="">
-                            Discover an endless variety of the world’s
-                            best artisan coffee from each of our roasters.
+                            We cover the cost and coffee is delivered fast.
+                             Peak freshness: guaranteed.
                         </p>
                     </div>
                 </div>
@@ -238,8 +256,11 @@
         </section>
         <!-- section-4 -->
         <section class="mt-[296px]">
+            <!-- header of section -->
             <h3 class="h3 text-grey">How it works</h3>
+            <!-- div-content -->
             <div class="flex-between mx-[8px]">
+                <!-- Card-1 -->
                 <div class="mt-[32px]">
                     <h3 class="h3 heading-3">01</h3>
                     <h3 class="heading-card">Pick your
@@ -249,6 +270,7 @@
                         ethically sourced and we pay fair
                         prices for them. There are new coffees in all profiles every month for you to try out.</p>
                 </div>
+                <!-- Carrd-2 -->
                 <div class="mt-[32px]">
                     <h3 class="h3 heading-3">02</h3>
                     <h3 class="heading-card">Choose the frequency</h3>
@@ -256,6 +278,7 @@
                         grind type. Pause, skip or cancel your subscription with no commitment through our online
                         portal.</p>
                 </div>
+                <!-- Card-3 -->
                 <div class="mt-[32px]">
                     <h3 class="h3 heading-3">03</h3>
                     <h3 class="heading-card">Receive and enjoy!</h3>
@@ -267,12 +290,14 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-        <img src="./images/Group 5.png" alt="Coffeeroasters" class="w-[235px] h-[25px]">
+        <img src="./images/Group 5.png" alt="Logo-2" class="w-[235px] h-[25px]">
+        <!-- div links -->
         <div class="div-footer">
             <a href="#" class="a">HOME</a>
             <a href="#" class="a">ABOUT US</a>
             <a href="#" class="a">CREATE YOUR PLAN</a>
         </div>
+        <!-- div-footer links -->
         <div class="div-footer">
             <a href="https://www.facebook.com/login" target="_blank">
                 <img src="./images/Path.svg" alt="Facebook" class="hover:opacity-70 cursor-pointer">
