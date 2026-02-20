@@ -2,314 +2,402 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title of my page -->
-    <title>Coffee</title>
-    <!-- links for tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- links for fints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
-        rel="stylesheet">
-     <!-- style of my page -->
-    <style type="text/tailwindcss">
-        @theme{
-            /* colors  */
-            --color-dark-cyan: #0E8784;
-            --color-cyan: #66D2CF;
-            --color-dark-blue: #333D4B;
-            --color-pale-orange: #FDD6BA;
-            --color-light-cream: #FEFCF7;
-            --color-grey: #83888F;
-            --color-disabled: #E2DEDB;
-            /* fonts */
-            --font-barlow: "Barlow", sans-serif;
-            --font-fraunces: "Fraunces", serif;
-            /* text-size  */
-            --text-10xl: 150px;
-            --text-10xl-line-height: 72px;
-            --text-7xl: 72px;
-            --text-7xl-line-height: 72px;
-            --text-4xl: 40px;
-            --text-4xl-line-height: 48px;
-            --text-3xl: 32px;
-            --text-3xl-line-height: 36px;
-            --text-2xl: 24px;
-            --text-2xl-line-height: 32px;
-            --text-base: 16px;
-            --text-base-line-height: 26px;
-            --text-xs: 12px;
-            --text-xs-line-height: 15px;
-        } 
-        .title {
-             @apply text-10xl font-fraunces font-black }
-        h1 { 
-            @apply font-fraunces font-black text-7xl  }
-        h2 {
-             @apply font-fraunces font-black text-4xl  }
-        h3 {
-             @apply font-fraunces font-black text-3xl  }
-        h4 {
-             @apply font-fraunces font-black text-2xl  }
-        .body {
-             @apply font-barlow text-base text-dark-blue }
-        nav {
-             @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px]
-            flex items-center gap-[32px]
-        }
-        p{ 
-            @apply font-barlow text-base text-light-cream
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title of my page -->
+  <title>Coffee</title>
+  <!-- links for tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- links for fints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+    rel="stylesheet">
 
-        }
-        button {
-            @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled
-                   text-white font-fraunces font-black text-lg
-                   py-[15px] px-[31px] rounded-md 
-        }
-        .flex-between {
-            @apply flex justify-between items-center
-        }
-        a{
-            @apply  hover:text-dark-cyan
-        }
-        .section{
-            @apply  bg-[url('./images/Bitmap.png')] bg-cover h-[600px] 
-        rounded-[10px] text-white flex items-center pl-[85px]
-        }
-        .main{
-            @apply  mx-auto space-y-[92px] mx-[81px]
-        }
-        .section-2{ @apply top-[115px] text-center
+  <!-- style of my page -->
+  <style type="text/tailwindcss">
+    @theme{
+      /* colors  */
+      --color-dark-cyan: #0E8784;
+      --color-cyan: #66D2CF;
+      --color-dark-blue: #333D4B;
+      --color-pale-orange: #FDD6BA;
+      --color-light-cream: #FEFCF7;
+      --color-grey: #83888F;
+      --color-disabled: #E2DEDB;
+      /* fonts */
+      --font-barlow: "Barlow", sans-serif;
+      --font-fraunces: "Fraunces", serif;
 
-        }
-        .span-section{
-            @apply font-fraunces font-black text-7xl
-        }
-        .div-section-2{
-            @apply text-start 
-        }
-        .section-3{
-            @apply bg-dark-blue rounded-[10px] text-white h-[577px] 
-                        flex flex-col items-center space-y-[86px]
-        }
-        .div-hero{
-            @apply grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 pt-12
-        }
-        .div-2{
-            @apply flex flex-col md:flex-row lg:flex-col items-center text-center md:text-left lg:text-center gap-6 md:gap-9
-        }
-        .hero{
-            @apply max-w-[540px] space-y-[32px] text-center pt-[100px]
-        }
-        .div-section-3{
-            @apply grid grid-cols-3 gap-[30px] px-[85px]
-        }
-        .card{
-            @apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] 
-                 flex items-center flex-col space-y-[56px]
-        }
-        .card-2{
+      /* your text-size tokens (kept as you had) */
+      --text-10xl: 150px;
+      --text-10xl-line-height: 72px;
+      --text-7xl: 72px;
+      --text-7xl-line-height: 72px;
+      --text-4xl: 40px;
+      --text-4xl-line-height: 48px;
+      --text-3xl: 32px;
+      --text-3xl-line-height: 36px;
+      --text-2xl: 24px;
+      --text-2xl-line-height: 32px;
+      --text-base: 16px;
+      --text-base-line-height: 26px;
+      --text-xs: 12px;
+      --text-xs-line-height: 15px;
+    } 
 
-        }
-        .heading-card{
-            @apply max-w-[195px] pt-[38px]
-        }
-        .paragraphe-card{
-            @apply max-w-[320px] mt-[42px]
-        }
-        .footer{ @apply mt-[319px] mb-[88px] bg-dark-blue py-[40px] px-[81px] flex justify-between items-center container mx-auto
+    .title { @apply text-10xl font-fraunces font-black }
+    h1 { @apply font-fraunces font-black text-7xl }
+    h2 { @apply font-fraunces font-black text-4xl }
+    h3 { @apply font-fraunces font-black text-3xl }
+    h4 { @apply font-fraunces font-black text-2xl }
 
-        }
-        .div-footer{
-            @apply flex gap-[33px] text-xs font-bold text-grey tracking-[0.92px]
-        }
-        .heading-3{
-                 @apply text-pale-orange text-[72px]
-        }
+    .body { @apply font-barlow text-base text-dark-blue }
 
-           </style>
+    nav {
+      @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px]
+             flex items-center gap-[32px];
+    }
+
+    p { @apply font-barlow text-base text-light-cream }
+
+    button {
+      @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled
+             text-white font-fraunces font-black text-lg
+             py-[15px] px-[31px] rounded-md;
+    }
+
+    .flex-between { @apply flex justify-between items-center }
+
+    a { @apply hover:text-dark-cyan }
+
+    /* ---------------- MOBILE FIRST (phone) + keep PC as lg ---------------- */
+
+    /* header */
+    .header {
+      @apply flex justify-between items-center
+             px-6 py-6
+             lg:px-[81px] lg:py-[44px];
+    }
+    .navbar { @apply hidden lg:flex; }
+
+    /* main wrapper */
+    .main {
+      @apply mx-auto space-y-[92px]
+             mx-0 px-0 pt-0
+             lg:mx-[81px];
+    }
+
+    /* hero */
+    .section{
+      @apply bg-[url('./images/Bitmap.png')] bg-cover bg-center
+             rounded-[10px] text-white
+             h-[500px] px-6
+             flex items-center justify-center text-center
+             lg:h-[600px] lg:pl-[85px] lg:pr-0
+             lg:justify-start lg:text-left;
+    }
+
+    /* collection */
+    .section-2{ @apply top-[115px] text-center }
+
+    .span-section{
+      @apply font-fraunces font-black
+             text-[40px] leading-[44px]
+             lg:text-7xl;
+    }
+
+    .div-hero{
+      @apply grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 pt-12;
+    }
+
+    /* NO tablet changes: remove md behavior */
+    .div-2{
+      @apply flex flex-col items-center text-center gap-6
+             lg:flex-col lg:text-center;
+    }
+
+    .div-section-2{ @apply text-center lg:text-start }
+
+    /* section 3 */
+    .section-3{
+      @apply bg-dark-blue rounded-[10px] text-white
+             h-auto
+             flex flex-col items-center
+             space-y-[48px] py-16
+             lg:h-[577px] lg:space-y-[86px] lg:py-0;
+    }
+
+    .hero{
+      @apply max-w-[540px] space-y-[24px] text-center
+             px-6 pt-0
+             lg:px-0 lg:space-y-[32px] lg:pt-[100px];
+    }
+
+    .div-section-3{
+      @apply grid grid-cols-1 gap-6
+             px-6
+             lg:grid-cols-3 lg:gap-[30px] lg:px-[85px];
+    }
+
+    .card{
+      @apply bg-dark-cyan rounded-[8px]
+             pt-10 px-8 pb-10
+             flex items-center flex-col space-y-6
+             lg:pt-[72px] lg:px-[48px] lg:pb-[48px] lg:space-y-[56px];
+    }
+
+    .heading-card{ @apply max-w-[195px] pt-[38px] }
+    .paragraphe-card{ @apply max-w-[320px] mt-[42px] }
+    .heading-3{ @apply text-pale-orange text-[72px] }
+
+    /* section 4: stacked on phone, keep your PC row on lg */
+    .steps{
+  @apply flex flex-col gap-12 mt-10
+         items-center text-center
+         lg:flex-row lg:justify-between lg:items-start lg:text-left lg:gap-0 lg:mt-0;
+}
+    /* footer: stacked on phone, keep your PC row on lg */
+    .footer{
+      @apply mt-24 mb-16 bg-dark-blue
+             py-14 px-6
+             flex flex-col items-center gap-12 text-center
+             lg:mt-[319px] lg:mb-[88px]
+             lg:px-[81px] lg:py-[40px]
+             lg:flex lg:flex-row lg:justify-between lg:items-center lg:text-left
+             container mx-auto;
+    }
+    
+    .div-footer-1{
+      @apply flex flex-col items-center gap-4
+             text-xs font-bold text-grey tracking-[0.92px]
+             lg:flex-row lg:gap-[33px];
+    }
+    .div-footer{
+  @apply flex items-center gap-6
+         text-xs font-bold text-grey tracking-[0.92px]
+         flex-wrap justify-center
+         lg:gap-[33px];
+}
+    .div-social{
+         @apply hover:opacity-70 cursor-pointer
+}
+  </style>
 </head>
-<!-- body -->
+
 <body>
-<!-- header -->
-    <header class="flex-between py-[44px] px-[81px]">
-        <img src="./images/Group 5.svg" alt="logo" class="w-[235px] h-[26px]">
-        <nav class="nav tracking-[0.92px]">
-            <a class="a" href="#">HOME</a>
-            <a class="a" href="#">ABOUT US</a>
-            <a class="a" href="#">Create your plan</a>
-        </nav>
-    </header>
-    <!-- main -->
-    <main class="main px-[79px] pt-[48px]">
-        <!-- section-1 -->
-        <section class="section container">
-            <!-- content -->
-            <div class="max-w-[493px]">
-                <h1 class="h1 mb-[32px]">Great coffee made simple.</h1>
-                <p class="p mb-[56px]">
-                    Start your mornings with the world’s best coffees.
-                    Try our expertly curated artisan coffees from our
-                    best roasters delivered directly to your door, at your schedule.
-                </p>
-                <button class="button">
-                    Create your plan
-                </button>
-            </div>
-        </section>
-        <!-- section-2 -->
-        <section class="section-2">
-            <div>
-                <!-- title of my 4 content -->
-                <span class="span-section">
-                    our collection
-                </span>
-            </div>
-            <div class="div-hero">
-                <!--Card-1 -->
-                <div class="div-2">
-                    <img src="./images/kopi1 copy.png" alt="Gran Espresso" class="w-[200px] md:w-[255px]">
-                    <div class="div-section-2">
-                        <h4 class="h4">Gran Espresso</h4>
-                        <p class="body max-w-[255px]">Light and flavorful blend with cocoa and black pepper for an
-                            intense experience</p>
-                    </div>
-                </div>
-                <!-- Card-2 -->
-                <div class="div-2">
-                    <img src="./images/kopi2.png" alt="Planalto" class="w-[200px] md:w-[255px]">
-                    <div class="div-section-2">
-                        <h4 class="h4">Planalto</h4>
-                        <p class="body max-w-[255px]">Brazilian dark roast with rich and velvety body, and hints of
-                            fruits and nuts</p>
-                    </div>
-                </div>
-                <!-- Card-3 -->
-                <div class="div-2">
-                    <img src="./images/kopi3.png" alt="Piccollo" class="w-[200px] md:w-[255px]">
-                    <div class="div-section-2">
-                        <h4 class="h4">Piccollo</h4>
-                        <p class="body max-w-[255px]">Mild and smooth blend featuring notes of toasted almond and dried
-                            cherry</p>
-                    </div>
-                </div>
-                <!-- Card-4 -->
-                <div class="div-2">
-                    <img src="./images/kopi4.png" alt="Danche" class="w-[200px]">
-                    <div class="div-section-2">
-                        <h4 class="h4">Danche</h4>
-                        <p class="body max-w-[255px]">Ethiopian hand-harvested blend densely packed with vibrant fruit
-                            notes</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section-3 -->
-        <section class="section-3">
-            <!-- Content section-3 -->
-            <div class="hero">
-                <h2 class="h2">Why choose us?</h2>
-                <p class="p">
-                    A large part of our role is buying great coffee as well as
-                    helping international buyers discover exceptional coffee from
-                    around the world. This means working closely with the best coffee
-                    growers to give you a more impactful experience on every level.
-                </p>
-            </div>
-            <!-- div-cards -->
-            <div class="div-section-3">
-                <!-- card 1 -->
-                <div class="card">
-                    <img src="./images/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
-                    <div class="text-center ">
-                        <h3 class="h3 mb-[24px]">Best quality</h3>
-                        <p class="p">
-                            Discover an endless variety of the world’s
-                            best artisan coffee from each of our roasters.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./images/Combined Shape.svg" alt="Exclusive benefits" class="w-[72px] h-[72px]">
-                    <div class="text-center ">
-                        <h3 class="h3 mb-[24px]">Exclusive&nbsp;benefits</h3>
-                        <p class="p">
-                           Special offers and swag when you subscribe,
-                            including 30% off your first shipment.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./images/Combined Shape(1).svg" alt="Free shipping" class="w-[72px] h-[72px]">
-                    <div class="text-center ">
-                        <h3 class="h3 mb-[24px]">Free shipping</h3>
-                        <p class="">
-                            We cover the cost and coffee is delivered fast.
-                             Peak freshness: guaranteed.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section-4 -->
-        <section class="mt-[296px]">
-            <!-- header of section -->
-            <h3 class="h3 text-grey">How it works</h3>
-            <!-- div-content -->
-            <div class="flex-between mx-[8px]">
-                <!-- Card-1 -->
-                <div class="mt-[32px]">
-                    <h3 class="h3 heading-3">01</h3>
-                    <h3 class="heading-card">Pick your
-                        coffee</h3>
-                    <p class="body paragraphe-card">Select from our evolving range of artisan coffees. Our beans
-                        are
-                        ethically sourced and we pay fair
-                        prices for them. There are new coffees in all profiles every month for you to try out.</p>
-                </div>
-                <!-- Carrd-2 -->
-                <div class="mt-[32px]">
-                    <h3 class="h3 heading-3">02</h3>
-                    <h3 class="heading-card">Choose the frequency</h3>
-                    <p class="body paragraphe-card">Customize your order frequency, quantity, even your roast style and
-                        grind type. Pause, skip or cancel your subscription with no commitment through our online
-                        portal.</p>
-                </div>
-                <!-- Card-3 -->
-                <div class="mt-[32px]">
-                    <h3 class="h3 heading-3">03</h3>
-                    <h3 class="heading-card">Receive and enjoy!</h3>
-                    <p class="body paragraphe-card">We ship your package within 48 hours, freshly roasted. Sit back and
-                        enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- footer -->
-    <footer class="footer">
-        <img src="./images/Group 5.png" alt="Logo-2" class="w-[235px] h-[25px]">
-        <!-- div links -->
-        <div class="div-footer">
-            <a href="#" class="a">HOME</a>
-            <a href="#" class="a">ABOUT US</a>
-            <a href="#" class="a">CREATE YOUR PLAN</a>
+  <!-- header -->
+  <header class="header">
+    <img src="./images/Group 5.svg" alt="logo-1" class="w-[170px] lg:w-[235px] h-auto">
+
+    <!-- desktop nav (PC only) -->
+    <nav class="navbar tracking-[0.92px]">
+      <a class="a" href="#">HOME</a>
+      <a class="a" href="#">ABOUT US</a>
+      <a class="a" href="#">Create your plan</a>
+    </nav>
+
+    <!-- mobile menu button (phone only) -->
+    <button id="menuBtn" class="lg:hidden bg-transparent hover:bg-transparent p-2" aria-label="Open menu">
+      <img src="./images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    </button>
+  </header>
+
+  <!-- mobile menu dropdown -->
+  <div id="mobileMenu" class="lg:hidden hidden px-6 pb-6">
+    <nav class="font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex flex-col gap-4">
+      <a class="a" href="#">HOME</a>
+      <a class="a" href="#">ABOUT US</a>
+      <a class="a" href="#">Create your plan</a>
+    </nav>
+  </div>
+
+  <!-- main -->
+  <main class="main px-[79px] pt-[48px]">
+    <!-- section-1 -->
+    <section class="section container my-0 mx-auto">
+      <!-- content -->
+      <div class="max-w-[493px]">
+        <h1 class="h1 mb-[32px]">Great coffee made simple.</h1>
+        <p class="p mb-[56px]">
+          Start your mornings with the world’s best coffees.
+          Try our expertly curated artisan coffees from our
+          best roasters delivered directly to your door, at your schedule.
+        </p>
+        <button class="button">
+          Create your plan
+        </button>
+      </div>
+    </section>
+
+    <!-- section-2 -->
+    <section class="section-2 container my-0 mx-auto">
+      <div>
+        <!-- title of my 4 content -->
+        <span class="span-section">
+          our collection
+        </span>
+      </div>
+
+      <div class="div-hero">
+        <!--Card-1 -->
+        <div class="div-2">
+          <img src="./images/kopi1 copy.png" alt="Gran Espresso" class="w-[200px] md:w-[255px]">
+          <div class="div-section-2">
+            <h4 class="h4">Gran Espresso</h4>
+            <p class="body max-w-[255px]">Light and flavorful blend with cocoa and black pepper for an
+              intense experience</p>
+          </div>
         </div>
-        <!-- div-footer links -->
-        <div class="div-footer">
-            <a href="https://www.facebook.com/login" target="_blank">
-                <img src="./images/Path.svg" alt="Facebook" class="hover:opacity-70 cursor-pointer">
-            </a>
-            <a href="https://www.twitter.com/login" target="_blank">
-                <img src="./images/Path(1).svg" alt="Twitter" class="hover:opacity-70 cursor-pointer">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="./images/Shape.svg" alt="Instagram" class="hover:opacity-70 cursor-pointer">
-            </a>
+
+        <!-- Card-2 -->
+        <div class="div-2">
+          <img src="./images/kopi2.png" alt="Planalto" class="w-[200px] md:w-[255px]">
+          <div class="div-section-2">
+            <h4 class="h4">Planalto</h4>
+            <p class="body max-w-[255px]">Brazilian dark roast with rich and velvety body, and hints of
+              fruits and nuts</p>
+          </div>
         </div>
-    </footer>
+
+        <!-- Card-3 -->
+        <div class="div-2">
+          <img src="./images/kopi3.png" alt="Piccollo" class="w-[200px] md:w-[255px]">
+          <div class="div-section-2">
+            <h4 class="h4">Piccollo</h4>
+            <p class="body max-w-[255px]">Mild and smooth blend featuring notes of toasted almond and dried
+              cherry</p>
+          </div>
+        </div>
+
+        <!-- Card-4 -->
+        <div class="div-2">
+          <img src="./images/kopi4.png" alt="Danche" class="w-[200px]">
+          <div class="div-section-2">
+            <h4 class="h4">Danche</h4>
+            <p class="body max-w-[255px]">Ethiopian hand-harvested blend densely packed with vibrant fruit
+              notes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <!-- section-3 -->
+    <section class="section-3">
+      <!-- Content section-3 -->
+      <div class="hero">
+        <h2 class="h2">Why choose us?</h2>
+        <p class="p">
+          A large part of our role is buying great coffee as well as
+          helping international buyers discover exceptional coffee from
+          around the world. This means working closely with the best coffee
+          growers to give you a more impactful experience on every level.
+        </p>
+      </div>
+
+      <!-- div-cards -->
+      <div class="div-section-3">
+        <!-- card 1 -->
+        <div class="card">
+          <img src="./images/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
+          <div class="text-center ">
+            <h3 class="h3 mb-[24px]">Best quality</h3>
+            <p class="p">
+              Discover an endless variety of the world’s
+              best artisan coffee from each of our roasters.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/Combined Shape.svg" alt="Exclusive benefits" class="w-[72px] h-[72px]">
+          <div class="text-center ">
+            <h3 class="h3 mb-[24px]">Exclusive&nbsp;benefits</h3>
+            <p class="p">
+              Special offers and swag when you subscribe,
+              including 30% off your first shipment.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/Combined Shape(1).svg" alt="Free shipping" class="w-[72px] h-[72px]">
+          <div class="text-center ">
+            <h3 class="h3 mb-[24px]">Free shipping</h3>
+            <p class="">
+              We cover the cost and coffee is delivered fast.
+              Peak freshness: guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-4 -->
+   <section class="mt-[296px] text-center lg:text-left">
+  <!-- header of section -->
+  <h3 class="h3 text-grey">How it works</h3>
+
+  <!-- div-content -->
+  <div class="steps mx-[8px] flex flex-col items-center gap-12 mt-10 lg:flex-row lg:justify-between lg:items-start lg:gap-0 lg:mt-0">
+    
+    <!-- Card-1 -->
+    <div class="mt-[32px] max-w-[327px] lg:max-w-none">
+      <h3 class="h3 heading-3">01</h3>
+      <h3 class="heading-card mx-auto lg:mx-0">Pick your coffee</h3>
+      <p class="body paragraphe-card mx-auto lg:mx-0">
+        Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair
+        prices for them. There are new coffees in all profiles every month for you to try out.
+      </p>
+    </div>
+
+    <!-- Card-2 -->
+    <div class="mt-[32px] max-w-[327px] lg:max-w-none">
+      <h3 class="h3 heading-3">02</h3>
+      <h3 class="heading-card mx-auto lg:mx-0">Choose the frequency</h3>
+      <p class="body paragraphe-card mx-auto lg:mx-0">
+        Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+      </p>
+    </div>
+
+    <!-- Card-3 -->
+    <div class="mt-[32px] max-w-[327px] lg:max-w-none">
+      <h3 class="h3 heading-3">03</h3>
+      <h3 class="heading-card mx-auto lg:mx-0">Receive and enjoy!</h3>
+      <p class="body paragraphe-card mx-auto lg:mx-0">
+        We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+      </p>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <img src="./images/Group 5.png" alt="Logo-2" class="w-[235px] h-[25px]">
+
+    <!-- div links -->
+    <div class="div-footer-1">
+      <a href="#" class="a">HOME</a>
+      <a href="#" class="a">ABOUT US</a>
+      <a href="#" class="a">CREATE YOUR PLAN</a>
+    </div>
+
+    <!-- social links -->
+    <div class="div-footer">
+      <a href="https://www.facebook.com/login" target="_blank">
+        <img src="./images/Path.svg" alt="Facebook" class="div-socia">
+      </a>
+      <a href="https://www.twitter.com/login" target="_blank">
+        <img src="./images/Path(1).svg" alt="Twitter" class="div-socia">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="./images/Shape.svg" alt="Instagram" class="div-socia">
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
